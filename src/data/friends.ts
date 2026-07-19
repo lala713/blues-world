@@ -723,8 +723,8 @@ const realFriends: FriendProfile[] = [
     username: "@aureum_vireyn",
     twitterUrl: "https://x.com/aureum_vireyn",
     profileImage: "",
-    friendsSince: "2025",
-    friendsSinceLabel: "Late 2025",
+    friendsSince: "2025-10-15",
+    friendsSinceLabel: "October–November 2025",
     friendshipDatePrecision: "approximate",
     letter: {
       image: assetPath("images/friends/aureni/aureni-letter-art.png"),

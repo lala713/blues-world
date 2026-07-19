@@ -146,6 +146,20 @@ const aureniLetterText = [
   "— Aurenie"
 ];
 
+const oceanLetterText = [
+  "Happy Birthday Blueii!! ",
+  "I'm really glad we met because you're genuinely such a kind and calming person to have around.",
+  "I hope this year brings you lots of happiness, good memories, and reminds you that you're appreciated more than you think.",
+  "There are people who like you and are happy to have you in their lives, me included.",
+  "I also made you a little birthday edit!",
+  'I picked your favorite song and your favorite color, so I tried to make it as "you" as possible.',
+  "I really hope you like it because I had fun making something I thought you'd enjoy.",
+  "Have the best birthday, and take good care of yourself.",
+  "Here's to another year of random chats and friendship.",
+  "Happy Birthday once again! ",
+  "~ Ocean"
+];
+
 const wildieLetterText = [
   "Hey Blue ",
   "To be honest I have so much yet very little bit to talk. It's your first birthday with me.",
@@ -769,24 +783,38 @@ const realFriends: FriendProfile[] = [
   {
     id: "ocean",
     displayName: "Ocean",
-    username: "",
-    twitterUrl: "",
+    username: "@HappyJmMe",
+    twitterUrl: "https://x.com/HappyJmMe",
     profileImage: "",
-    friendsSince: "",
-    friendsSinceLabel: "",
-    friendshipDatePrecision: "approximate",
+    friendsSince: "2026-01-01",
+    friendsSinceLabel: "2026",
+    friendshipDatePrecision: "year",
     letter: {
       image: assetPath("images/friends/ocean/ocean-letter-art.png"),
       imageAlt: "Illustrated birthday letter from Ocean to Blue",
-      body: []
+      body: oceanLetterText
     },
-    reasons: {},
+    reasons: {
+      admire: "Her random pictures."
+    },
+    friendship: {
+      whenWeMet:
+        "I think it was random when I started talking with her, but I remember someone told me she didn't feel loved those days, so I wrote her a letter telling her that she matters—which is true—and that she could DM me anytime whenever she felt down. Later she told me she missed me when I was IA and that she read my letter again. That memory means a lot to me.",
+      firstImpression: "",
+      impressionNow: ""
+    },
     birthdayEdit: {
       title: "A Birthday Edit from Ocean",
       description: "Ocean made this special edit for Blue using her favorite song and favorite color.",
       videoSrc: `${import.meta.env.BASE_URL}videos/friends/ocean/ocean-birthday-edit.mp4`
     },
-    playlistSongs: [],
+    playlistSongs: [
+      {
+        title: "Mikrokosmos",
+        artist: "BTS",
+        spotifyUrl: "https://open.spotify.com/track/0jSccBRnhNU4KtACMQPvco?si=e91023cb74004a54"
+      }
+    ],
     favoriteQuotes: [],
     photos: [],
     insideJokes: [],

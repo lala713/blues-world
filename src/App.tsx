@@ -34,7 +34,7 @@ const renderParagraphs = (text: string) =>
 
 const reasonEntries = (friend: FriendProfile) =>
   [
-    ["One thing I admire about you", friend.reasons.admire],
+    [friend.id === "ocean" ? "One thing I love about her" : "One thing I admire about you", friend.reasons.admire],
     ["One funny thing you always do", friend.reasons.funnyThing],
     ["One favorite memory with you", friend.reasons.favoriteMemory],
     ["One wish for you this year", friend.reasons.wishForThisYear]
@@ -69,7 +69,7 @@ const usesApproximateTimer = (friend: FriendProfile) =>
 const possessive = (name: string) => `${name}'s`;
 const profileContextEntries = (friend: FriendProfile) =>
   [
-    ["When we met", friend.friendship?.whenWeMet],
+    [friend.id === "ocean" ? "How we met" : "When we met", friend.friendship?.whenWeMet],
     ["First impression", friend.friendship?.firstImpression],
     ["Now", friend.friendship?.impressionNow]
   ].filter((entry): entry is [string, string] => hasText(entry[1]));

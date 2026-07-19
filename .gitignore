@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.tsbuildinfo
+vite-dev*.log
+.DS_Store
+.vite/
+coverage/
+*.local
+.idea/
+tmp-*.png

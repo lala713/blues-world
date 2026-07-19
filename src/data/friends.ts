@@ -702,7 +702,7 @@ const realFriends: FriendProfile[] = [
     username: "@aureum_vireyn",
     twitterUrl: "https://x.com/aureum_vireyn",
     profileImage: "",
-    friendsSince: "2025-01-01",
+    friendsSince: "2025",
     friendsSinceLabel: "2025–2026",
     friendshipDatePrecision: "approximate",
     letter: {

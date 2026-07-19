@@ -601,9 +601,9 @@ const realFriends: FriendProfile[] = [
     username: "@ot7_purple_bts",
     twitterUrl: "https://x.com/ot7_purple_bts",
     profileImage: "",
-    friendsSince: "",
-    friendsSinceLabel: "",
-    friendshipDatePrecision: "approximate",
+    friendsSince: "2025-10-15",
+    friendsSinceLabel: "October 2025",
+    friendshipDatePrecision: "month",
     letter: {
       image: assetPath("images/friends/haru/haru-letter-art.png"),
       imageAlt: "Illustrated birthday letter from Haru to Blue",

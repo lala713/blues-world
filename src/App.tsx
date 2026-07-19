@@ -545,6 +545,24 @@ const ProfilePlaylistSection = ({ friend }: { friend: FriendProfile }) => {
   );
 };
 
+const ProfileBirthdayEditSection = ({ friend }: { friend: FriendProfile }) => {
+  const edit = friend.birthdayEdit;
+  if (!edit) return null;
+
+  return (
+    <article id="birthday-edit" className="profile-note profile-section profile-note--wide birthday-edit-section">
+      <h2>{edit.title}</h2>
+      <p className="friend-video-description">{edit.description}</p>
+      <div className="friend-video-frame">
+        <video className="friend-video" controls playsInline preload="metadata">
+          <source src={edit.videoSrc} type="video/mp4" />
+          Your browser does not support embedded videos.
+        </video>
+      </div>
+    </article>
+  );
+};
+
 const FavoriteQuotesSection = ({ friend }: { friend: FriendProfile }) => {
   const quotes = (friend.favoriteQuotes || []).filter((quote) => hasText(quote.quote));
   if (!quotes.length) return null;
@@ -707,6 +725,7 @@ const OomfProfilePage = () => {
   const contextEntries = profileContextEntries(friend);
   const sections = [
     { id: "letter", label: "Letter", show: hasImagePath(friend.letter.image) || hasLetterText(friend) },
+    { id: "birthday-edit", label: "Birthday Edit", show: Boolean(friend.birthdayEdit) },
     { id: "reasons", label: "Reasons", show: hasReasons(friend) },
     { id: "playlist", label: "Playlist", show: hasPlaylistSongs(friend) },
     { id: "quotes", label: "Favorite Quotes", show: hasFavoriteQuotes(friend) },
@@ -767,6 +786,7 @@ const OomfProfilePage = () => {
             onOpen={() => setExpandedLetter(true)}
           />
         </article>
+        <ProfileBirthdayEditSection friend={friend} />
         <ProfileReasonSection friend={friend} />
         <ProfilePlaylistSection friend={friend} />
         <FavoriteQuotesSection friend={friend} />

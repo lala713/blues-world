@@ -1097,6 +1097,44 @@ button:disabled,
   background-color: rgba(255, 253, 248, 0.94);
 }
 
+.birthday-edit-section {
+  grid-column: 1 / -1;
+}
+
+.friend-video-description {
+  max-width: 46rem;
+  margin: 0.15rem auto 0.85rem;
+  color: var(--deep-blue);
+  font-weight: 900;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.friend-video-frame {
+  width: min(100%, 46rem);
+  margin: 0 auto;
+  border: 2px solid rgba(52, 106, 165, 0.36);
+  border-radius: 1.55rem;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(255, 240, 178, 0.75), transparent 4rem),
+    linear-gradient(var(--paper-line) 1px, transparent 1px),
+    linear-gradient(180deg, #eaf8ff, var(--warm-white));
+  background-size: auto, 100% 24px, auto;
+  box-shadow: 0 0.8rem 0 rgba(52, 106, 165, 0.12), var(--soft-shadow);
+  padding: 0.65rem;
+}
+
+.friend-video {
+  display: block;
+  width: 100%;
+  max-width: 46rem;
+  height: auto;
+  margin: 0 auto;
+  border: 2px solid rgba(52, 106, 165, 0.24);
+  border-radius: 1.25rem;
+  background: var(--deep-blue);
+}
+
 .profile-answer {
   border-top: 2px dashed rgba(52, 106, 165, 0.18);
   padding-top: 0.65rem;

@@ -35,6 +35,12 @@ export interface FriendLetter {
   imageAlt?: string;
 }
 
+export interface FriendBirthdayEdit {
+  title: string;
+  description: string;
+  videoSrc: string;
+}
+
 export interface FriendProfile {
   id: string;
   displayName: string;
@@ -60,6 +66,7 @@ export interface FriendProfile {
   favoriteQuotes?: FavoriteQuote[];
   photos?: ProfilePhoto[];
   insideJokes?: InsideJoke[];
+  birthdayEdit?: FriendBirthdayEdit;
 
   friendship?: {
     whenWeMet: string;
@@ -758,6 +765,32 @@ const realFriends: FriendProfile[] = [
     insideJokes: [],
     secretMessage:
       "I love you, Blue. May you have a great year ahead, and don't think you don't deserve the attention you're getting on your day. Blue deserves every good thing in the world."
+  },
+  {
+    id: "ocean",
+    displayName: "Ocean",
+    username: "",
+    twitterUrl: "",
+    profileImage: "",
+    friendsSince: "",
+    friendsSinceLabel: "",
+    friendshipDatePrecision: "approximate",
+    letter: {
+      image: assetPath("images/friends/ocean/ocean-letter-art.png"),
+      imageAlt: "Illustrated birthday letter from Ocean to Blue",
+      body: []
+    },
+    reasons: {},
+    birthdayEdit: {
+      title: "A Birthday Edit from Ocean",
+      description: "Ocean made this special edit for Blue using her favorite song and favorite color.",
+      videoSrc: `${import.meta.env.BASE_URL}videos/friends/ocean/ocean-birthday-edit.mp4`
+    },
+    playlistSongs: [],
+    favoriteQuotes: [],
+    photos: [],
+    insideJokes: [],
+    secretMessage: ""
   },
   {
     id: "tannyy",
